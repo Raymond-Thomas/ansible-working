@@ -1,7 +1,7 @@
 ---
-- name: Generate host passport vars_files
-  host: all 
-  gather_facts: true 
+- name: Generate host passport files
+  hosts: all
+  gather_facts: true
 
   tasks:
     - name: Deploy host passport file
@@ -12,5 +12,5 @@
 
     - name: Display completion message
       ansible.builtin.debug:
-        msg: "Host passport generated for {{ inventory_hostname}}"
+        msg: "Host passport generated for {{ inventory_hostname }}"
 
